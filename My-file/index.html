@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/repayment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="main-title">
+          <h2>Mortgage Calculator</h2>
+          <p class="clear">Clear All</p>
+        </div>
+        <div class="mortgage-amount">
+          <h4 class="title">Mortgage Amount</h4>
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="mortgage-info">
+          <div class="term">
+            <h4 class="title">Mortgage Term</h4>
+            <div><input type="text" /></div>
+          </div>
+          <div class="rate">
+            <h4 class="title">Interest Rate</h4>
+            <div>
+              <input type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="mortgage-type">
+          <h4 class="title">Mortgage Type</h4>
+          <div>
+            <input type="radio" id="repayment" name="type" />
+            <label for="repayment">Repayment</label>
+          </div>
+          <div>
+            <input type="radio" id="inveret" name="type" />
+            <label for="inveret">Interest Only</label>
+          </div>
+        </div>
+        <div class="calc">
+          <img src="../assets/images/icon-calculator.svg" alt="" />
+          Calculate Repayments
+        </div>
+      </div>
+      <div class="result">
+        <img src="../assets/images/illustration-empty.svg" alt="" />
+        <h2 class="title">Results shown here</h2>
+        <p>
+          Complete the form and click "calculate repayments" to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
