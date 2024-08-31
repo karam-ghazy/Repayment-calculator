@@ -65,10 +65,14 @@ body {
   color: #3b4143;
 }
 
-.calculator .title,
-.calculator .error {
+.calculator .title {
   margin-bottom: 1%;
   color: var(--font-color);
+}
+.calculator div.error .error {
+  position: absolute;
+  color: var(--error-color);
+  bottom: -40%;
 }
 /* end main title */
 
@@ -162,6 +166,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  transition: var(--transition-speed);
 }
 
 .calculator .mortgage-info .term div::before,
@@ -175,6 +180,7 @@ body {
   top: 0;
   background-color: #e1f6ff;
   color: #415057;
+  transition: var(--transition-speed);
 }
 
 .calculator .mortgage-info .term div::before {
@@ -276,6 +282,9 @@ body {
 .calculator .mortgage-type.error div {
   border-color: var(--error-color);
 }
+.calculator .mortgage-type.error .error {
+  bottom: -20%;
+}
 /* end mortgage type */
 
 /* start calc bnt */
@@ -321,6 +330,58 @@ body {
   text-align: center;
   color: var(--light-font-color);
 }
+.result.show {
+  padding: 2.5%;
+  justify-content: flex-start;
+}
+.result.show h2 {
+  text-align: left;
+  margin: 4% 0 5%;
+}
+.result.show p {
+  text-align: left;
+  margin-bottom: 7%;
+}
+.result.show hr {
+  margin: 5%;
+  border-color: var(--font-color);
+}
+
+.result.show .info {
+  width: 90%;
+  padding: 5%;
+  border-top: 5px solid var(--highlight-color);
+  border-radius: var(--border-radius);
+  background-color: var(--main-color);
+  margin-bottom: 10%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.result.show .info .monthly {
+  h4 {
+    color: var(--light-font-color);
+    text-align: left;
+  }
+  p {
+    margin: 0;
+    font-size: 40px;
+    color: var(--highlight-color);
+  }
+}
+.result.show .info .total {
+  h4 {
+    color: var(--light-font-color);
+    text-align: left;
+  }
+  p {
+    margin: 0;
+    font-size: 25px;
+    color: #fff;
+  }
+}
 /* end result */
 
 /* start media query */
@@ -348,7 +409,7 @@ body {
   .container {
     flex-direction: column;
     width: 85%;
-    top: 60%;
+    top: 75%;
   }
 
   .calculator,
@@ -372,7 +433,6 @@ body {
 
 @media (max-width: 575px) {
   .container {
-    top: 70%;
     width: 100%;
   }
 
